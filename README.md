@@ -1,3 +1,0 @@
-# Smá test
-
-blabla
