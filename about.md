@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### Tilraun
 
-### More Information
+Hér ætla ég að setja inn hugleiðindar og greiningar um ýmis málefni.
 
-A place to include any other types of information that you'd like to include about yourself.
+### Hafa samband
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[davidsteinar@gmail.com](mailto:davidsteinar@gmail.com)
