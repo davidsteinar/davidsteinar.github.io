@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Welcome to another page
+## velkomin á síðu 2
 
 _yay_
 
