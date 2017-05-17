@@ -1,3 +1,0 @@
-## Heimasíða
-
-Fyrsta tilraun
