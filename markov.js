@@ -2003,8 +2003,12 @@ var make_title = function (min_length) {
     if (title.length < min_length) return make_title(min_length);
     return title.join(' ');
 };
-
+/*
 $('#generate').on('click', function () {
     var title = make_title(3 + Math.floor(3 * Math.random()));
     $('#generated_title').html(title);
-});
+*/
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = make_title(3 + Math.floor(3 * Math.random()));
+}
