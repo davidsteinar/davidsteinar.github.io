@@ -1,7 +1,7 @@
 body{
     margin:1em auto;
     max-width:30em;
-    font-family: 'Georgia', serif;
+    font-family: 'Spectral', serif;
     font-size: 1.2em;
     line-height:1.6;
     background-color:#fffff2;
@@ -15,11 +15,12 @@ button {
     background-color:#dc2d17;
     border: none;
     color: white;
-    padding: 20px 30px;
+    padding: 5px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-family: 'Spectral', serif;
+    font-size: 1em;
     height: 75px;
     width: 200px;
 }
