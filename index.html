@@ -10,39 +10,48 @@
 </head>
 
 <body>
-	<header>
-	<h1>Nýnefni og nýyrði</h1>
-  </header>
-  
-	<p>Nokkur dæmi um ný mannanöfn:
-	<ul>
-		<li>Blámi
-		<li>Friðlóa
-		<li>Faldi
-		<li>Hrafnberg
-		<li>Valía
-		<li>Steinskuggi
-		<li>Blíðey
-		<li>Glóri
-	</ul>
-	
-	<label for="language">Veldu tungumál:</label>
-  <select id="language">
-  <option value="">Íslenska</option>
-  <option value="sunny">Sænska</option>
-  </select>
-
-	<div>
-    <label for="Karlkyns">Karlkyns</label><input id="kk" type="radio" name="kkkvk" value="Karlkyns" checked>
-    <label for="Kvenkyns">Kvenkyns</label><input id="kvk" type="radio" name="kkkvk" value="Kvenkyns">
-  </div>
-  
-  <button class="getmodel">Ná í módel</button>
-
-  <button class="generate">Búa til nýtt nafn</button>
-  
-  <p class="generatednafn"></p>
-	
+  <div class='gridwrapper'>
+  	<header class=main-header>
+    	<h1>Nýnefni</h1>
+    </header>
+    
+    <aside class=side>
+    	<p>Nokkur dæmi um ný mannanöfn:
+    	<ul>
+    		<li>Blámi
+    		<li>Friðlóa
+    		<li>Faldi
+    		<li>Hrafnberg
+    		<li>Valía
+    		<li>Steinskuggi
+    		<li>Blíðey
+    		<li>Glóri
+    	</ul>
+  	</aside>
+  	
+  	<main class=content>
+    	<label for="language">Veldu tungumál:</label>
+      <select id="language">
+      <option value="">Íslenska</option>
+      <option value="sunny">Sænska</option>
+      </select>
+    
+    	<div>
+        <label for="Karlkyns">Karlkyns</label><input id="kk" type="radio" name="kkkvk" value="Karlkyns" checked>
+        <label for="Kvenkyns">Kvenkyns</label><input id="kvk" type="radio" name="kkkvk" value="Kvenkyns">
+      </div>
+      
+      <button class="getmodel">Ná í módel</button>
+    
+      <button class="generate">Búa til nýtt nafn</button>
+      
+      <p class="generatednafn"></p>
+  	</main>
+  	
+  	<footer class=main-footer>
+  	  <p>Davíð Steinar</p>
+  	</footer>
+  	
+	</div>
 	<script src="generator.js"></script>
-	
 </body>

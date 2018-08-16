@@ -1,15 +1,20 @@
 body{
     margin:1em auto;
-    max-width:20em;
+    max-width:40em;
     padding:0.5em;
     font-family: 'Baskerville','Times New Roman','Times',serif;
     font-size: 1.2em;
     line-height:1.6;
     background-color:#fffff2;
 }
+
 h1,h2,h3 {
-    line-height:1.2;
     color:#dc2d17;
+}
+
+.generatednafn{
+  text-align: center;
+  font-size:3em;
 }
 
 button {
@@ -19,7 +24,6 @@ button {
     padding: 0.5em 1em;
     margin: 0.5em;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-family: 'Spectral', serif;
     font-size: 1em;
@@ -27,3 +31,41 @@ button {
     width: 10em;
     cursor: pointer;
 }
+
+.gridwrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header"
+    "content"
+    "sidebar"
+    "footer";
+}
+
+@media (min-width: 500px) {
+  .gridwrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "footer  footer";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-header {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+.side {
+  grid-area: sidebar;
+}
+.main-footer {
+  grid-area: footer;
+}
+
