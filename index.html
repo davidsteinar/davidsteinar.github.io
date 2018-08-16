@@ -25,12 +25,16 @@
 		<li>Blíðey
 		<li>Glóri
 	</ul>
+
+	<div>
+    <label for="Karlkyns">Karlkyns</label><input id="kk" type="radio" name="kkkvk" value="Karlkyns" checked>
+    <label for="Kvenkyns">Kvenkyns</label><input id="kvk" type="radio" name="kkkvk" value="Kvenkyns">
+  </div>
+  <div>
+    <button class="generate">Búa til nýtt nafn</button>
+  </div>
+  
+  <p class="generatednafn"></p>
 	
-	<button onclick=generate_karlanafn()>Búa til nýtt karlmannsnafn</button>
-	<p id="karlmanns_takki"></p>
-	
-	<button onclick=generate_kvennanafn()>Búa til nýtt kvenmannsnafn</button>
-	<p id="kvenmanns_takki"></p>
-	
-	<script src="trigram.js"></script>
+	<script src="generator.js"></script>
 </body>
