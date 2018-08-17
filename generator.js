@@ -8,7 +8,7 @@ var karlanofn = ["Aage", "Aaron", "Abel", "Abraham", "Adam", "Addi", "Adel", "Ad
 function includes(arr,obj) {
     return (arr.indexOf(obj) != -1);
 }
-
+var startofname = document.getElementById('startofname');
 var generate = document.querySelector('.generate');
 var create = document.querySelector('.getmodel');
 var sidunafn = document.querySelector('.generatednafn');
@@ -16,8 +16,10 @@ create.addEventListener('click', get_model);
 generate.addEventListener('click', generate_nafn);
 
 
-var existing_names
-var model
+var existing_names;
+var model;
+var N = 3;
+var maxlength = 20;
 
 function get_model(){
   if(document.getElementById("kk").checked) {
@@ -38,14 +40,15 @@ function get_model(){
   }
 }
 
-function generate_nafn(startkey="", N=3, maxlength=20){
-  //var initkey = " ".repeat(N-startkey.length) + startkey;
-  var initkey = "   "
+function generate_nafn(){
+  var startkey = startofname.value;
+  var start = " ".repeat(N) + startkey;
+  var initkey = start.slice(start.length-N,start.length)
   var iteration = 0;
   const max_iterations=100000;
 
   while(true){
-    var nafn = initkey;
+    var nafn = start;
     var key = initkey;
     for(var i=0; i<maxlength; i++){
       var probability = Math.random();
