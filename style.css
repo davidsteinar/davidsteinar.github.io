@@ -1,20 +1,22 @@
 body{
-    margin:1em auto;
-    max-width:40em;
-    padding:0.5em;
+    padding:1em;
+    margin:0em;
     font-family: 'Baskerville','Times New Roman','Times',serif;
-    font-size: 1.2em;
-    line-height:1.6;
+    font-size:1.2em;
     background-color:#fffff2;
 }
 
-h1,h2,h3 {
-    color:#dc2d17;
+h1 {
+  font-size: 2.2em;
+  color: #fffff2;
+}
+h2 {
+  color: #dc2d17;
 }
 
 .generatednafn{
-  text-align: center;
-  font-size:3em;
+  text-align: left;
+  font-size: 2em;
 }
 
 button {
@@ -25,7 +27,7 @@ button {
     margin: 0.5em;
     text-align: center;
     display: inline-block;
-    font-family: 'Spectral', serif;
+    font-family: 'Baskerville','Times New Roman','Times',serif;
     font-size: 1em;
     height: 3em;
     width: 10em;
@@ -45,6 +47,7 @@ button {
 @media (min-width: 500px) {
   .gridwrapper {
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: 50px 1fr 30px;
     grid-template-areas:
       "header  header"
       "sidebar content"
@@ -58,9 +61,17 @@ button {
 
 .main-header {
   grid-area: header;
+  background-color:#dc2d17;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	margin:-1em;
 }
+
+
 .content {
   grid-area: content;
+  padding: 2em;
 }
 .side {
   grid-area: sidebar;
