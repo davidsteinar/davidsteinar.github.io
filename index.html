@@ -6,17 +6,24 @@
 	<meta name="author" content="Davíð Steinar Ásgrímsson">
   <meta name="description" content="Nýnefni er skemmtileg leið til að finna ný nöfn">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Nýnefni</title>
+  	<title>Nýnefni</title>
 </head>
 
 <body>
-  <div class='gridwrapper'>
-  	<header class=main-header>
-    	<div><h1>Nýnefni</h1></div>
+  <div class="gridwrapper">
+  	<header>
+      <nav>
+        <ul>
+          <li class="navtitle"><a href="index.html">Nýnefni</a></li>
+          <li><a href="hvernig.html">Hvernig virkar þetta?</a></li>
+        </ul>
+      </nav>
     </header>
+
     
-  	<main class=content>
+  	<main>
   	  
+  	  <div class="form">
     	<label for="language">Veldu tungumál:</label>
       <select id="language">
       <option value="">Íslenska</option>
@@ -35,12 +42,15 @@
       <button class="getmodel">Ná í módel</button>
     
       <button class="generate">Búa til nýtt nafn</button>
+      </div>
       
       <p class="generatednafn"></p>
+      <hr>
   	</main>
   	
-  	 <aside class=side>
-    	<p>Nokkur dæmi um ný mannanöfn:
+  	 <aside>
+      Dæmi um ný nöfn:
+    	<div>
     	<ul>
     		<li>Blámi
     		<li>Friðlóa
@@ -51,9 +61,10 @@
     		<li>Blíðey
     		<li>Glóri
     	</ul>
+    	</div>
   	</aside>
   	
-  	<footer class=main-footer>
+  	<footer>
   	  <p>Davíð Steinar</p>
   	</footer>
   	

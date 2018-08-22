@@ -1,3 +1,8 @@
+:root {
+  --red: #ffffff;
+  --offwhite:#f6f6f6;
+}
+
 html {
   font-size: 62.5%;
   font-family: 'Baskerville','Times New Roman','Times',serif;; }
@@ -7,47 +12,35 @@ body{
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
-  padding: 13px;
-  background-color:#fffff2;
+  background-color: var(--offwhite);
 }
 
 h1, h2, h3{
-  line-height: 1.1;
   font-weight: 700;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  -ms-word-break: break-all;
   word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
   hyphens: auto;
-  color: #dc2d17;
+  color: black;
 }
 
 h1 {
   font-size: 2.35em;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.2em;
 }
 h3 {
   font-size: 1.75em;
 }
 
 .generatednafn{
-  text-align: left;
-  font-size: 2em;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
+  font-size: 3em;
+  text-align: center;
+
 }
 
 button {
-    background-color:#dc2d17;
-    border: none;
-    color: #fffff2;
     padding: 0.5  1em;
     margin: 0.5em;
     text-align: center;
@@ -61,21 +54,22 @@ button {
 
 .gridwrapper {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 0px;
   grid-template-areas:
-    "header"
+    "head"
     "content"
     "sidebar"
     "footer";
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .gridwrapper {
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 50px 1fr 1fr 30px;
     grid-template-areas:
-      "header  header"
-      "sidebar content"
+      "head  head"
+      "content content"
+      "sidebar sidebar"
       "footer  footer";
   }
   body {
@@ -83,25 +77,56 @@ button {
   }
 }
 
-.main-header {
-  grid-area: header;
-  display: flex;
-  justify-content: center;
-	align-items: center;
-	margin:-1em;
+header {
+  grid-area: head;
+  background-color:var(--red);
 }
 
-.content {
+main {
   grid-area: content;
-  padding: 2em;
+  padding:10px;
+  margin: 0 auto;
 
 }
-.side {
+
+aside {
   grid-area: sidebar;
-  padding: 1em;
-
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
 }
-.main-footer {
+
+footer {
   grid-area: footer;
 }
 
+nav ul {
+  display:flex;
+  padding: 0px;
+  margin:10px;
+  list-style: none;
+  justify-content: space-between;
+}
+
+li a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    color: var(--offwhite);
+}
+
+.navtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.form
+{
+    text-align: center;
+    width: 20em;
+}
