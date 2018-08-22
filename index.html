@@ -24,31 +24,58 @@
   	<main>
   	  
   	  <div class="form">
-    	<label for="language">Veldu tungumál:</label>
-      <select id="language">
-      <option value="">Íslenska</option>
-      </select>
-    
-    	<div>
-        <label for="Karlkyns">Karlkyns</label><input id="kk" type="radio" name="kkkvk" value="Karlkyns" checked>
-        <label for="Kvenkyns">Kvenkyns</label><input id="kvk" type="radio" name="kkkvk" value="Kvenkyns">
+  	    <fieldset>
+  	    <div>
+      	<label for="language">Veldu tungumál:</label>
+        <select id="language">
+        <option value="IS">Íslenska</option>
+        <option value="SE">Sænska</option>
+        </select>
+        </div>
+        
+        <div>
+        <label for="N">Veldu N:</label>
+        <select id="N">
+        <option value="3">Þrír</option>
+        <option value="2">Tveir</option>
+        </select>
+        </div>
+        
+      	<label for="modeltype">Veldu módel:</label>
+        <select id="modeltype">
+        <option value="male">Karlkyns</option>
+        <option value="female">Kvenkyns</option>
+        <option value="gaelunofnkk">Gælunöfn kk</option>
+        <option value="gaelunofnkvk">Gælunöfn kvk</option>
+        <option value="mythology">Goðafræði</option>
+        <option value="hestar">Hestar</option>
+        <option value="hryssur">Hryssur</option>
+        <option value="hundar">Hundar</option>
+        <option value="tikur">Tíkur</option>
+        <option value="fiskar">Fiskar</option>
+        <option value="flora">Flóra</option>
+        </select>
+        
+        <button class="getmodel">Ná í módel</button>
+
+        </fieldset>
       </div>
       
-      <div>
-      <label for="startofname">Nafn byrjar á:</label>
-      <input id="startofname" type="text" placeholder="">
-      </div>
+      <h1><p class="generatednafn"></p></h1>
       
-      <button class="getmodel">Ná í módel</button>
-    
-      <button class="generate">Búa til nýtt nafn</button>
+      <div class="form">
+      <fieldset>
+        <button class="generate">Búa til nýtt nafn</button>
+        <div>
+        <label for="startofname">Nafn byrjar á:</label>
+        <input id="startofname" type="text" placeholder="A, Bj, Ann, ...">
+        </div>
+      </fieldset>
       </div>
-      
-      <p class="generatednafn"></p>
-      <hr>
   	</main>
   	
   	 <aside>
+  	 <!--
       Dæmi um ný nöfn:
     	<div>
     	<ul>
@@ -62,6 +89,7 @@
     		<li>Glóri
     	</ul>
     	</div>
+    	-->
   	</aside>
   	
   	<footer>

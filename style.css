@@ -5,18 +5,19 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Baskerville','Times New Roman','Times',serif;; }
+  font-family: 'Baskerville','Times New Roman','Times',serif;
+}
 
 body{
   font-size: 1.8rem;
   line-height: 1.618;
-  max-width: 38em;
+  /*max-width: 38em;*/
   margin: auto;
   background-color: var(--offwhite);
 }
 
 h1, h2, h3{
-  font-weight: 700;
+  font-weight: 600;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
@@ -35,9 +36,10 @@ h3 {
 }
 
 .generatednafn{
-  font-size: 3em;
   text-align: center;
-
+  word-wrap:break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 button {
@@ -128,5 +130,4 @@ li a:hover {
 .form
 {
     text-align: center;
-    width: 20em;
 }
