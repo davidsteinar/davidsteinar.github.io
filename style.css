@@ -16,6 +16,7 @@ body{
   line-height: 1.618;
   /*max-width: 38em;*/
   background-color: var(--background);
+  background-image: linear-gradient(var(--offwhite), var(--grey));
   margin: auto;
 }
 
@@ -43,6 +44,8 @@ h3 {
   hyphens: auto;
   overflow-wrap: break-word;
   font-size:6rem;
+  background-color: var(--offwhite);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0px 3px rgba(0,0,0,0.23);
 }
 
 button {
@@ -88,7 +91,7 @@ header {
   grid-area: head;
   background-color:var(--offwhite);
 	font-style: italic;
-  border-bottom: 1px solid var(--grey);
+  border-bottom: 2px solid var(--grey);
   top: 0;
   place-self: center stretch;
   padding:10px;
@@ -147,7 +150,7 @@ li a:hover {
 }
 
 .headertitle{
-	font-weight: 700;
+	font-weight: 600;
   margin-right: auto
 }
 
@@ -159,3 +162,4 @@ fieldset {
   border: 0px solid var(--grey);
   line-height: 2.5;
 }
+
