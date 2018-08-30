@@ -15,8 +15,8 @@ body{
   font-size: 1.8rem;
   line-height: 1.618;
   /*max-width: 38em;*/
-  margin: auto;
   background-color: var(--background);
+  /*margin: auto;*/
 }
 
 h1, h2, h3{
@@ -28,7 +28,7 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: 5.35rem;
+  font-size: 3.35rem;
 }
 h2 {
   font-size: 1.2rem;
@@ -39,9 +39,10 @@ h3 {
 
 .generatednafn{
   text-align: center;
-  word-wrap:break-word;
+  word-wrap: break-word;
   hyphens: auto;
   overflow-wrap: break-word;
+  font-size:6rem;
 }
 
 button {
@@ -50,18 +51,20 @@ button {
     font-family: 'Baskerville','Times New Roman','Times',serif;
     font-size: 2rem;
     height: 5rem;
-    width: 15rem;
+    width: 20rem;
     cursor: pointer;
 }
 
 .gridwrapper {
 	display: grid;
-	grid-template-areas: "head head"
-	                     "sidebar content"
-	                     "footer footer";
-	grid-template-columns: 2fr 3fr;
+	grid-template-areas: "head"
+	                     "content"
+	                     "sidebar"
+	                     "footer";
+	grid-template-columns: 1fr;
 	grid-template-rows:
 	          50px
+						1fr
 						1fr
 						30px;
 	min-height: 100vh;
@@ -80,23 +83,27 @@ button {
 							30px;
 	}
 }
+
 header {
   grid-area: head;
   background-color:var(--offwhite);
 	font-style: italic;
-  align-self: center;
-  align-items: center;
   border-bottom: 1px solid var(--grey);
+  top: 0;
+  place-self: center stretch;
+  padding:10px;
 }
 
 main {
   grid-area: content;
-  padding:15px;
+  padding:35px;
 }
 
 aside {
   grid-area: sidebar;
-  padding:15px;
+  padding:35px;
+  display:flex;
+  justify-content: center;
 }
 
 footer {
@@ -106,6 +113,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  color: var(--brand);
 }
 
 header ul {
@@ -113,10 +121,12 @@ header ul {
   list-style: none;
 }
 
+
 ul li a {
     margin:50px;
     color: black;
     text-decoration: none;
+    font-size:2rem;
 }
 
 li a:hover {
@@ -126,10 +136,14 @@ li a:hover {
 .form
 {
     text-align: center;
+    padding:0 20px;
+    margin:20px;
 }
 
 .headernav{
   display:flex;
+  padding:0px;
+  margin:0px;
 }
 
 .headertitle{
@@ -143,5 +157,5 @@ li a:hover {
 
 fieldset {
   border: 1px solid var(--grey);
-  background: var(--offwhite);
+  line-height: 2.5;
 }
