@@ -16,7 +16,7 @@ body{
   line-height: 1.618;
   /*max-width: 38em;*/
   background-color: var(--background);
-  /*margin: auto;*/
+  margin: auto;
 }
 
 h1, h2, h3{
@@ -156,6 +156,6 @@ li a:hover {
 }
 
 fieldset {
-  border: 1px solid var(--grey);
+  border: 0px solid var(--grey);
   line-height: 2.5;
 }
