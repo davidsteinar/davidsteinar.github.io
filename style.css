@@ -58,6 +58,10 @@ button {
     cursor: pointer;
 }
 
+.MyClass{
+    background: var(--offwhite);
+}
+
 .gridwrapper {
 	display: grid;
 	grid-template-areas: "head"
