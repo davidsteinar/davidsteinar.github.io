@@ -3,13 +3,20 @@ var generate = document.querySelector('.generate');
 var create = document.querySelector('.getmodel');
 var sidunafn = document.querySelector('.generatednafn');
 var siduN = document.getElementById("N")
+var siduMax = document.getElementById("maxnamelength")
 var sidulang = document.getElementById("language")
 var sidumodel = document.getElementById("modeltype")
+var siduunique = document.getElementById("unique")
 
+console.log(siduunique.value)
+siduN.addEventListener('change', change_color)
+sidulang.addEventListener('change', change_color)
+sidumodel.addEventListener('change', change_color)
 create.addEventListener('click', get_model);
 generate.addEventListener('click', generate_nafn);
 
-var generated_names=[];
+function change_color(){
+}
 
 function get_model(){
   var lang = sidulang.value;
@@ -27,7 +34,7 @@ function get_model(){
   fetch(names_url)
   .then(response => response.json())
   .then(data => sessionStorage.setItem('existingnames',JSON.stringify(data)));
-}
+  }
 
 var generated_names = [];
 
@@ -40,8 +47,10 @@ function generate_nafn(){
   var initkey = start.slice(start.length-N,start.length)
   var iteration = 0;
   const max_iterations=100000;
-  const maxlength = 20;
-
+  var maxlength;
+  if(siduMax.value === ''){maxlength = 20}
+  else{maxlength = Number(siduMax.value)+1}
+  
   while(true){
     var nafn = start;
     var key = initkey;
