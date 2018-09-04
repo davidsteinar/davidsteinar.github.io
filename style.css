@@ -51,6 +51,7 @@ fieldset {
   line-height: 2;
 }
 
+
 .gridwrapper {
 	display: grid;
 
@@ -113,7 +114,8 @@ header ul li a {
 
 .form
 {
-  text-align: center
+  place-self: center;
+  text-align: center;
 }
 
 .headernav{
