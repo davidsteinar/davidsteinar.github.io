@@ -62,7 +62,7 @@ fieldset {
 	                     "footer";
 	grid-template-columns: 1fr;
 	grid-template-rows:
-	          68px
+	          50px
 						1fr
 						1fr
 						30px;
@@ -103,7 +103,7 @@ header ul {
 }
 
 header ul li{
-  padding:0 1rem 0 1rem;
+  padding:0 2rem 0 2rem;
 }
 
 header ul li a {
@@ -123,13 +123,13 @@ header ul li a {
   justify-content:space-between;
   align-items: center;
   margin:0;
-  padding:1rem;
+  padding:0.5rem;
 }
 
 
 .headertitle{
 	font-weight: 600;
-	font-size:3rem;
+	font-size:2.5rem;
 	font-style:italic;
 	color: var(--brand);
 }
