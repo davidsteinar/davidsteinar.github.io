@@ -58,16 +58,15 @@ input {
 
 .gridwrapper {
 	display: grid;
+  height: 100vh;
 
   grid-gap: 1rem;
 	grid-template-areas: "head"
 	                     "content"
-	                     "sidebar"
 	                     "footer";
 	grid-template-columns: 1fr;
 	grid-template-rows:
 	          50px
-						1fr
 						1fr
 						30px;
 }
@@ -86,8 +85,6 @@ main {
 }
 
 aside {
-  grid-area: sidebar;
-  padding:2rem;
 }
 
 
@@ -150,4 +147,5 @@ header ul li a {
   font-size:6rem;
   background-color: var(--offwhite);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0px 3px rgba(0,0,0,0.23);
+  word-break: break-all;
 }
