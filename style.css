@@ -51,6 +51,10 @@ fieldset {
   line-height: 2;
 }
 
+input {
+	font-size: 16px;
+  }
+
 
 .gridwrapper {
 	display: grid;
@@ -78,6 +82,7 @@ header {
 
 main {
   grid-area: content;
+  justify-content:center;
 }
 
 aside {
@@ -135,6 +140,9 @@ header ul li a {
 }
 
 .generatednafn{
+  max-width: 500px;
+  margin:auto;
+  margin-bottom: 2rem;
   text-align: center;
   word-wrap: break-word;
   hyphens: auto;
