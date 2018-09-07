@@ -15,7 +15,6 @@ body{
   font-size: 1.8rem;
   line-height: 1.618;
   background-color: var(--background);
-  background-image: linear-gradient(var(--background), var(--grey));
   margin: auto;
 }
 
@@ -28,7 +27,7 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: 3.35rem;
+  font-size: 2.35rem;
 }
 h2 {
   font-size: 1.2rem;
@@ -53,22 +52,21 @@ fieldset {
 
 input {
 	font-size: 16px;
-  }
+}
 
 
 .gridwrapper {
 	display: grid;
-  height: 100vh;
-
+	min-height: 100vh;
   grid-gap: 1rem;
 	grid-template-areas: "head"
 	                     "content"
 	                     "footer";
 	grid-template-columns: 1fr;
 	grid-template-rows:
-	          50px
+	          auto
 						1fr
-						30px;
+						auto;
 }
 
 header {
@@ -81,10 +79,7 @@ header {
 
 main {
   grid-area: content;
-  justify-content:center;
-}
-
-aside {
+  justify-content: center;
 }
 
 

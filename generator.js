@@ -2,16 +2,15 @@ var startofname = document.getElementById('startofname');
 var generate = document.querySelector('.generate');
 var create = document.querySelector('.getmodel');
 var sidunafn = document.querySelector('.generatednafn');
-var siduN = document.getElementById("N")
-var siduMax = document.getElementById("maxnamelength")
-var sidulang = document.getElementById("language")
-var sidumodel = document.getElementById("modeltype")
-var siduunique = document.getElementById("unique")
+var siduN = document.getElementById("N");
+var siduMax = document.getElementById("maxnamelength");
+var sidulang = document.getElementById("language");
+var sidumodel = document.getElementById("modeltype");
+var siduunique = document.getElementById("unique");
 
-console.log(siduunique.value)
-siduN.addEventListener('change', change_color)
-sidulang.addEventListener('change', change_color)
-sidumodel.addEventListener('change', change_color)
+siduN.addEventListener('change', change_color);
+sidulang.addEventListener('change', change_color);
+sidumodel.addEventListener('change', change_color);
 create.addEventListener('click', get_model);
 generate.addEventListener('click', generate_nafn);
 
@@ -24,7 +23,6 @@ function get_model(){
   var modeltype = sidumodel.value;
   
   var model_url = "https://raw.githubusercontent.com/davidsteinar/nynefni/master/models/" + lang + "_" + modeltype + "_" + N +"gram.json";
-
   var names_url = "https://raw.githubusercontent.com/davidsteinar/nynefni/master/data/names/" + lang + "_" + modeltype + ".json";
 
   fetch(model_url)
@@ -41,10 +39,11 @@ var generated_names = [];
 function generate_nafn(){
   var model = JSON.parse(sessionStorage.getItem('model'));
   var existing_names = JSON.parse(sessionStorage.getItem('existingnames'));
+  
   var startkey = startofname.value;
   var N = Number(siduN.value);
   var start = " ".repeat(N) + startkey;
-  var initkey = start.slice(start.length-N,start.length)
+  var initkey = start.slice(start.length-N,start.length);
   var iteration = 0;
   const max_iterations=100000;
   var maxlength;
