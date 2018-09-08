@@ -1,3 +1,4 @@
+
 :root {
   --brand: #dc2828;
   --offwhite:#fff;
@@ -15,6 +16,7 @@ body{
   font-size: 1.8rem;
   line-height: 1.618;
   background-color: var(--background);
+  background-image: linear-gradient(var(--background), var(--grey));
   margin: auto;
 }
 
@@ -27,7 +29,7 @@ h1, h2, h3{
 }
 
 h1 {
-  font-size: 2.35rem;
+  font-size: 3.35rem;
 }
 h2 {
   font-size: 1.2rem;
@@ -50,22 +52,21 @@ fieldset {
   line-height: 2;
 }
 
-input {
-	font-size: 16px;
-}
-
 
 .gridwrapper {
 	display: grid;
+
   grid-gap: 1rem;
 	grid-template-areas: "head"
 	                     "content"
+	                     "sidebar"
 	                     "footer";
 	grid-template-columns: 1fr;
 	grid-template-rows:
-	          50px
-	          1fr
-	          50px;
+	          68px
+						1fr
+						1fr
+						30px;
 }
 
 header {
@@ -78,7 +79,11 @@ header {
 
 main {
   grid-area: content;
-  justify-content: center;
+}
+
+aside {
+  grid-area: sidebar;
+  padding:2rem;
 }
 
 
@@ -99,7 +104,7 @@ header ul {
 }
 
 header ul li{
-  padding:0 2rem 0 2rem;
+  padding:0 1rem 0 1rem;
 }
 
 header ul li a {
@@ -119,21 +124,18 @@ header ul li a {
   justify-content:space-between;
   align-items: center;
   margin:0;
-  padding:0.5rem;
+  padding:1rem;
 }
 
 
 .headertitle{
 	font-weight: 600;
-	font-size:2.5rem;
+	font-size:3rem;
 	font-style:italic;
 	color: var(--brand);
 }
 
 .generatednafn{
-  max-width: 500px;
-  margin:auto;
-  margin-bottom: 2rem;
   text-align: center;
   word-wrap: break-word;
   hyphens: auto;
@@ -141,5 +143,4 @@ header ul li a {
   font-size:6rem;
   background-color: var(--offwhite);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0px 3px rgba(0,0,0,0.23);
-  word-break: break-all;
 }
