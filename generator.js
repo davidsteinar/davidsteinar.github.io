@@ -10,9 +10,14 @@ var siduunique = document.getElementById("unique");
 
 siduN.addEventListener('change', change_color);
 sidulang.addEventListener('change', change_color);
+sidulang.addEventListener('click', hide_options)
 sidumodel.addEventListener('change', change_color);
 create.addEventListener('click', get_model);
 generate.addEventListener('click', generate_nafn);
+
+
+function hide_options(){
+}
 
 function change_color(){
 }
