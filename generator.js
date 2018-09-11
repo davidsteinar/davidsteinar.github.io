@@ -31,7 +31,7 @@ function loadJSON(filePath, success, error)
 	xhr.send();
 }
 
-console.log(loadJSON("models/IS_male_3gram.json"))
+console.log(loadJSON("./models/IS_male_3gram.json"))
 
 function get_model(){
   var lang = sidulang.value;
