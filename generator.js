@@ -1,6 +1,5 @@
 var startofname = document.getElementById('startofname');
 var generate = document.querySelector('.generate');
-var create = document.querySelector('.getmodel');
 var sidunafn = document.querySelector('.generatednafn');
 var siduN = document.getElementById("N");
 var siduMax = document.getElementById("maxnamelength");
@@ -8,19 +7,31 @@ var sidulang = document.getElementById("language");
 var sidumodel = document.getElementById("modeltype");
 var siduunique = document.getElementById("unique");
 
-siduN.addEventListener('change', change_color);
-sidulang.addEventListener('change', change_color);
-sidulang.addEventListener('click', hide_options)
-sidumodel.addEventListener('change', change_color);
-create.addEventListener('click', get_model);
+siduN.addEventListener('change', get_model);
+sidulang.addEventListener('change', get_model);
+sidumodel.addEventListener('change', get_model);
 generate.addEventListener('click', generate_nafn);
 
-
-function hide_options(){
+function loadJSON(filePath, success, error)
+{
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function()
+	{
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			if (xhr.status === 200) {
+				if (success)
+					success(JSON.parse(xhr.responseText));
+		} else {
+			if (error)
+				error(xhr);
+			}
+		}
+	};
+	xhr.open("GET", filePath, true);
+	xhr.send();
 }
 
-function change_color(){
-}
+console.log(loadJSON("models/IS_male_3gram.json"))
 
 function get_model(){
   var lang = sidulang.value;
@@ -37,7 +48,7 @@ function get_model(){
   fetch(names_url)
   .then(response => response.json())
   .then(data => sessionStorage.setItem('existingnames',JSON.stringify(data)));
-  }
+}
 
 var generated_names = [];
 
