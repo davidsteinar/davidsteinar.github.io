@@ -12,34 +12,13 @@ sidulang.addEventListener('change', get_model);
 sidumodel.addEventListener('change', get_model);
 generate.addEventListener('click', generate_nafn);
 
-function loadJSON(filePath, success, error)
-{
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function()
-	{
-		if (xhr.readyState === XMLHttpRequest.DONE) {
-			if (xhr.status === 200) {
-				if (success)
-					success(JSON.parse(xhr.responseText));
-		} else {
-			if (error)
-				error(xhr);
-			}
-		}
-	};
-	xhr.open("GET", filePath, true);
-	xhr.send();
-}
-
-console.log(loadJSON("./models/IS_male_3gram.json"))
-
 function get_model(){
   var lang = sidulang.value;
   var modeltype = sidumodel.value;
   var N = siduN.value;
   
-  var model_url = "https://raw.githubusercontent.com/davidsteinar/nynefni/master/models/" + lang + "_" + modeltype + "_" + N +"gram.json";
-  var names_url = "https://raw.githubusercontent.com/davidsteinar/nynefni/master/data/names/" + lang + "_" + modeltype + ".json";
+  var model_url = "https://s3.eu-west-2.amazonaws.com/nynefni-data/models/" + lang + "_" + modeltype + "_" + N +"gram.json";
+  var names_url = "https://s3.eu-west-2.amazonaws.com/nynefni-data/names/" + lang + "_" + modeltype + ".json";
 
   fetch(model_url)
   .then(response => response.json())
