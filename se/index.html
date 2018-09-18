@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no maximum-scale=1">
+	<meta name="author" content="Davíð Steinar Ásgrímsson">
+  <meta name="description" content="Skemmtileg leið til að finna ný nöfn">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#dc2828">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+  
+	<link rel="stylesheet" type="text/css" href="../style.css">
+  	<title>Nýnefni</title>
+</head>
+
+<body>
+  <div class="gridwrapper">
+  	<header>
+        <ul class="headernav" role="navigation">
+          <li><a class="headertitle" href="../index.html">Nýnefni</a></li>
+          <li><a href="index.html"><img src="../img/logo.svg" alt="Logo" height="40" width="40" align="middle"></a></li>
+        </ul>
+    </header>
+
+    
+  	<main>
+  	  
+  	  <div class="form">
+  	    <fieldset>
+  	    <div>
+      	<label for="language">Välj språk:</label>
+        <select id="language">
+        <option value="IS">Islänska</option>
+        <option value="SE">Svenska</option>
+        <option value="DK">Danska</option>
+        <option value="NO">Norska</option>
+        <option value="PO">Polska</option>
+        </select>
+        </div>
+        
+        <div>
+        <label for="N">Välj N:</label>
+        <select id="N">
+        <option value="3">Tre</option>
+        <option value="23">Mix</option>
+        <option value="2">Två</option>
+        </select>
+        </div>
+        
+      	<label for="modeltype">Välj typ:</label>
+        <select id="modeltype">
+        <option disabled selected value> --- </option>
+        <option value="male">Man</option>
+        <option value="female">Kvinna</option>
+        <option value="gaelunofnkk">Gælunöfn karlkyns</option>
+        <option value="gaelunofnkvk">Gælunöfn kvenkyns</option>
+        <option value="unisex">Hvorugkyns</option>
+        <option value="mythology">Goðafræði</option>
+        <option value="hestar">Hestar</option>
+        <option value="hryssur">Hryssur</option>
+        <option value="hundar">Hundar</option>
+        <option value="tikur">Tíkur</option>
+        <option value="fiskar">Fiskategund</option>
+        <option value="flora">Flóra</option>
+        </select>
+        
+        </fieldset>
+      </div>
+      
+      <p class="generatednafn">...</p>
+      
+      <div class="form">
+      <fieldset>
+        <button class="generate">Få nytt namn</button>
+        <div>
+          <label for="startofname">Namn börjar på:</label>
+          <input id="startofname" type="text" placeholder="A, Bj, Ann, ...">
+        </div>
+        <div>
+           <label for="maxnamelength">Inte längre än:</label>
+           <input id="maxnamelength" type="number" pattern="\d*" placeholder="...">
+        </div>
+        
+        
+        <div>
+          <input type="checkbox" id="unique" value="yes" checked />
+          <label for="scales">Bara nya namn</label>
+        </div>
+      </fieldset>
+      </div>
+  	</main>
+  	
+  	<footer>
+  	  <p>© 2018 Davíð Steinar Ásgrímsson</p>
+  	</footer>
+  	
+	</div>
+	<script src="../generator.js"></script>
+</body>
