@@ -65,7 +65,7 @@ select {
 	grid-template-areas: "head head head"
 	                     "side content side2"
 	                     "footer footer footer";
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows:
 	          50px
 	          1fr
