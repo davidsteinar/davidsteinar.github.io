@@ -92,3 +92,4 @@ function generate_nafn(){
     }
   }
 }
+
