@@ -88,10 +88,8 @@ select {
 
 header {
   grid-area: head;
-  border-bottom: 2px solid var(--grey);
   top: 0;
   background-color:var(--offwhite);
-
 }
 
 main {
@@ -176,4 +174,13 @@ header ul li a {
 button, input, select, textarea {
   font-family : inherit;
   font-size   : 2rem;
+  
+}
+
+label {
+  margin-bottom: -1.5rem;
+}
+
+select, input{
+  margin:1rem;
 }
