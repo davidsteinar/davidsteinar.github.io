@@ -50,7 +50,7 @@ function generate_nafn(){
   var iteration = 0;
   const max_iterations=100000;
   var maxlength;
-  if(siduMax.value === ''){maxlength = 20}
+  if(siduMax.value === ''){maxlength = 15}
   else{maxlength = Number(siduMax.value)+1}
   
   while(true){
