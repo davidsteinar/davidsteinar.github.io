@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148342525-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148342525-2');
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Davíð Steinar Ásgrímsson">
@@ -33,7 +43,7 @@
 
       <button class="generate">Búa til nýtt nafn</button>
       
-      <label for="language">Veldu tungumál:</label>
+      <label for="language">Veldu tungumál</label>
       <select id="language">
       <option value="IS">Íslenska</option>
       <option value="SE">Sænska</option>
@@ -44,46 +54,40 @@
       <option value="ISCZ">Tékk-íslenska</option>
       </select>
             
-      <label for="modeltype">Veldu tegund:</label>
+      <label for="modeltype">Veldu tegund</label>
       <select id="modeltype">
-      <option disabled selected value> --- </option>
+      <option disabled selected value style="display:none"> </option>
       <option value="male">Karlkyns</option>
       <option value="female">Kvenkyns</option>
-      <option value="gaelunofnkk">Gælunöfn karlkyns</option>
-      <option value="gaelunofnkvk">Gælunöfn kvenkyns</option>
-      <option value="unisex">Hvorugkyns</option>
-      <option value="mythology">Goðafræði</option>
-      <option value="hestar">Hestar</option>
-      <option value="hryssur">Hryssur</option>
-      <option value="hundar">Hundar</option>
-      <option value="tikur">Tíkur</option>
-      <option value="fiskar">Fiskategund</option>
-      <option value="flora">Flóra</option>
+      <option value="gaelunofnkk" class="onlyIcelandic">Gælunöfn karlkyns</option>
+      <option value="gaelunofnkvk" class="onlyIcelandic">Gælunöfn kvenkyns</option>
+      <option value="unisex" class="onlyIcelandic">Hvorugkyns</option>
+      <option value="mythology" class="onlyIcelandic">Goðafræði</option>
+      <option value="hestar" class="onlyIcelandic">Hestar</option>
+      <option value="hryssur" class="onlyIcelandic">Hryssur</option>
+      <option value="hundar" class="onlyIcelandic">Hundar</option>
+      <option value="tikur" class="onlyIcelandic">Tíkur</option>
+      <option value="fiskar" class="onlyIcelandic">Fiskategund</option>
+      <option value="flora" class="onlyIcelandic">Flóra</option>
       </select>
 
-      <label for="N">Líkur á nafni:</label>
+      <label for="N">Veldu gerð</label>
       <select id="N" size="3">
-      <option selected value="3">Miklar</option>
-      <option value="23">Meðal</option>
-      <option value="2">Litlar</option>
+      <option selected value="3">Fallegt</option>
+      <option value="23">Flott</option>
+      <option value="2">Frumlegt</option>
       </select>
       
-      <label for="startofname">Nafn byrjar á:</label>
+      <label for="startofname">Nafn byrjar á</label>
       <input id="startofname" type="text" placeholder="A, Bj, Ann, ...">
 
-      <label for="maxnamelength">Ekki lengra en:</label>
-      <input id="maxnamelength" type="number" pattern="\d*" placeholder="...">
+      <label for="maxnamelength">Hámarksfjöldi bókstafa</label>
+      <input id="maxnamelength" type="number" pattern="\d*" value=10 placeholder="...">
       
-      <label for="scales">Bara ný nöfn</label>
-      <input type="checkbox" id="unique" value="yes" checked />
-
      </main>
-    
-      <aside>
-      </aside>
 
       <footer>
-      <p>© 2018 Davíð Steinar Ásgrímsson</p>
+      <p>© 2020 <a href="https://www.linkedin.com/in/davíð-steinar-ásgrímsson-59a863101">Davíð Steinar Ásgrímsson</a></p>
       </footer>
 
   </div>
