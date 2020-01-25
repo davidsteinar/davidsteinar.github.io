@@ -13,19 +13,23 @@ sidumodel.addEventListener('change', get_model);
 generate.addEventListener('click', generate_nafn);
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  get_model();
+}, false);
+
 function validate_input_get_model(){
   var lang = sidulang.value;
   var not_icelandic_types = document.getElementsByClassName("onlyIcelandic");
 
   if(lang == 'IS'){
     for (var i = 0; i < not_icelandic_types.length; i++){
-      not_icelandic_types[i].style.display = 'block';
+      not_icelandic_types[i].disabled = false;
     }
   }
   else {
     sidumodel.value = "male";
     for (var i = 0; i < not_icelandic_types.length; i++){
-      not_icelandic_types[i].style.display = 'none';
+      not_icelandic_types[i].disabled = true;
     }
   }
   get_model();
